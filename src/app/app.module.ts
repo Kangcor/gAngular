@@ -9,6 +9,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {Form2Component} from './FormControl/form2/form2.component';
 import { Form3Component } from './FormControl/form3/form3.component';
 import { Form4Component } from './FormControl/form4/form4.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { Form4Component } from './FormControl/form4/form4.component';
     Form2Component,
     Form3Component,
     Form4Component,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
