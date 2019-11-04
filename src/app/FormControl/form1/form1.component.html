@@ -1,0 +1,33 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">
+      Forms
+    </h1>
+    <p class="subtitle">
+      Single form control
+    </p>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control">
+
+            <!-- Codigo importante -->
+            <input class="input" type="text" placeholder="Text input" [formControl]="nameControl">
+            <!-- Codigo importante -->
+
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Un solo form control ya tiene estado y validadores, no necesitamos un formGroup en los casos mas sencillos
+      </div>
+    </div>
+
+
+
+  </div>
+</section>

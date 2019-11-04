@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Form control con validador lazy</p>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Text input" [formControl]="nameControl"
+                   [ngClass]="{'is-success': nameControl.valid, 'is-danger': nameHasError}">
+            <span class="icon is-small is-right">
+              <i class="fa" [ngClass]="{'fa-check': nameControl.valid, 'fa-exclamation-triangle': nameHasError}">
+              </i>
+            </span>
+          </div>
+          <p class="help is-success" *ngIf="nameControl.valid">You know how to type</p>
+          <p class="help is-danger" *ngIf="nameHasError">Must enter a name</p>
+
+        </div>
+
+      </div>
+      <div class="column">
+        Es deseable esperar a que el usuario interactue antes de mostrar los errores de validación
+      </div>
+    </div>
+
+  </div>
+</section>

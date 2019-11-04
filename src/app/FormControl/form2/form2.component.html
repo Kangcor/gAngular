@@ -1,0 +1,31 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Form control con validador</p>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Name</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Text input" [formControl]="nameControl"
+                   [ngClass]="{'is-success': nameControl.valid, 'is-danger': nameControl.invalid}">
+            <span class="icon is-small is-right">
+              <i class="fa" [ngClass]="nameControl.valid ? 'fa-check' : 'fa-exclamation-triangle'">
+              </i>
+            </span>
+          </div>
+          <p class="help is-success" *ngIf="nameControl.valid">You know how to type</p>
+          <p class="help is-danger" *ngIf="nameControl.invalid">Must enter a name</p>
+
+        </div>
+
+      </div>
+      <div class="column">
+        Podemos utilizar validadores para mostrar el estado que se encuentra el form control
+      </div>
+    </div>
+
+  </div>
+</section>
