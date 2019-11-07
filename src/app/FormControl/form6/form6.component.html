@@ -1,0 +1,201 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Select, radio, slider...</p>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Text</label>
+          <div class="control has-icons-left has-icons-right">
+            <input class="input" type="text" placeholder="Text input" [formControl]="textControl"
+                   [ngClass]="{'is-success': textControl.valid, 'is-danger': textControl.invalid}">
+            <span class="icon is-small is-right">
+              <i class="fa" [ngClass]="{'fa-check': textControl.valid, 'fa-exclamation-triangle': textControl.invalid}">
+              </i>
+            </span>
+          </div>
+          <p class="help is-danger" *ngIf="textControl.invalid">Uh Oh!</p>
+        </div>
+
+      </div>
+      <div class="column">
+        Value
+        <pre>{{ textControl.value | json }}</pre>
+        Errors
+        <pre>{{ textControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Number</label>
+          <div class="control">
+            <input class="input" type="number" placeholder="Number input" [formControl]="numberControl">
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Value
+        <pre>{{ numberControl.value | json }}</pre>
+        Errors
+        <pre>{{ numberControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Checkbox</label>
+          <div class="control">
+            <label class="checkbox">
+              <input type="checkbox" [formControl]="checkboxControl">
+              Check me!
+            </label>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Value
+        <pre>{{ checkboxControl.value | json }}</pre>
+        Errors
+        <pre>{{ checkboxControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Radio</label>
+          <div class="control">
+            <div class="control">
+              <label class="radio">
+                <input type="radio" name="radioControl" value="true1" [formControl]="radioControl">
+                Yes
+              </label>
+              <label class="radio">
+                <input type="radio" name="radioControl" value="false1" [formControl]="radioControl">
+                No
+              </label>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Radio value
+        <pre>{{ radioControl.value | json }}</pre>
+        Radio errors
+        <pre>{{ radioControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Select simple</label>
+          <div class="control">
+            <div class="select">
+              <select [formControl]="simpleSelectControl">
+                <option>Opción 1</option>
+                <option>Opción 2</option>
+                <option>Opción 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Value
+        <pre>{{ simpleSelectControl.value | json }}</pre>
+        Errors
+        <pre>{{ simpleSelectControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Select distinto valor</label>
+          <div class="control">
+            <div class="select">
+              <select [formControl]="valueSelectControl">
+                <option value="1">Opción 1</option>
+                <option value="2">Opción 2</option>
+                <option value="3">Opción 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+       Value
+        <pre>{{ valueSelectControl.value | json }}</pre>
+        Errors
+        <pre>{{ valueSelectControl.errors | json }}</pre>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Select object valor (binding)</label>
+          <div class="control">
+            <div class="select">
+              <select [formControl]="objSelectControl">
+                <option [value]="mockObj1">Opción 1</option>
+                <option [value]="mockObj2">Opción 2</option>
+                <option [value]="mockObj3">Opción 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label">Select object valor (ngValue)</label>
+          <div class="control">
+            <div class="select">
+              <select [formControl]="objSelectControl">
+                <option [ngValue]="mockObj1">Opción 1</option>
+                <option [ngValue]="mockObj2">Opción 2</option>
+                <option [ngValue]="mockObj3">Opción 3</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        Value
+        <pre>{{ objSelectControl.value | json }}</pre>
+        Errors
+        <pre>{{ objSelectControl.errors | json }}</pre>
+      </div>
+    </div>
+
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <nav
+      class="pagination is-centered"
+      role="navigation"
+      aria-label="pagination">
+      <a class="pagination-previous" [routerLink]="['/5']">Anterior</a>
+      <a class="pagination-next" disabled>Siguiente</a>
+    </nav>
+  </div>
+</section>

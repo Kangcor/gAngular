@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-form5',
@@ -7,14 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Form5Component {
 
-  nameControl = new FormControl('', [Validators.required]);
+  textControl = new FormControl('', []);
+  numberControl = new FormControl('', []);
+  checkboxControl = new FormControl('', []);
+  radioControl = new FormControl('', []);
+  simpleSelectControl = new FormControl('', []);
+  valueSelectControl = new FormControl('', []);
+  objSelectControl = new FormControl('', []);
 
-  get nameHasError() {
-    return this.nameControl.invalid && (this.nameControl.dirty || this.nameControl.touched);
-  }
-
-  batmanFn() {
-    this.nameControl.setValue('Batman');
-  }
+  mockObj1 = { text: 'Opción 1', value: '1', pippo: 'Mario' };
+  mockObj2 = { text: 'Opción 2', value: '2', pippo: 'Luigi' };
+  mockObj3 = { text: 'Opción 3', value: '3', pippo: 'Peach' };
 
 }
