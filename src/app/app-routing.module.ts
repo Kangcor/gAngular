@@ -6,6 +6,7 @@ import {Form3Component} from './FormControl/form3/form3.component';
 import {Form4Component} from './FormControl/form4/form4.component';
 import {Form5Component} from './FormControl/form5/form5.component';
 import {Form6Component} from './FormControl/form6/form6.component';
+import {Form7Component} from './FormControl/form7/form7.component';
 import {HomeComponent} from './home/home.component';
 import {ConstraintValidationComponent} from './basics/constraint-validation/constraint-validation.component';
 
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: '6',
     component: Form6Component,
+  },
+  {
+    path: '7',
+    component: Form7Component,
   }
 ];
 

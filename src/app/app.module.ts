@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { ConstraintValidationComponent } from './basics/constraint-validation/constraint-validation.component';
 import { Form5Component } from './FormControl/form5/form5.component';
 import { Form6Component } from './FormControl/form6/form6.component';
+import { Form7Component } from './FormControl/form7/form7.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { Form6Component } from './FormControl/form6/form6.component';
     ConstraintValidationComponent,
     Form5Component,
     Form6Component,
+    Form7Component,
   ],
   imports: [
     BrowserModule,
