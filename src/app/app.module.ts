@@ -14,6 +14,9 @@ import { ConstraintValidationComponent } from './basics/constraint-validation/co
 import { Form5Component } from './FormControl/form5/form5.component';
 import { Form6Component } from './FormControl/form6/form6.component';
 import { Form7Component } from './FormControl/form7/form7.component';
+import { PlaygroundComponent } from './FormControl/playground/playground.component';
+import { Group1Component } from './FormGroup/group1/group1.component';
+import { Group2Component } from './FormGroup/group2/group2.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { Form7Component } from './FormControl/form7/form7.component';
     Form5Component,
     Form6Component,
     Form7Component,
+    PlaygroundComponent,
+    Group1Component,
+    Group2Component,
   ],
   imports: [
     BrowserModule,

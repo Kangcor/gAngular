@@ -9,6 +9,9 @@ import {Form6Component} from './FormControl/form6/form6.component';
 import {Form7Component} from './FormControl/form7/form7.component';
 import {HomeComponent} from './home/home.component';
 import {ConstraintValidationComponent} from './basics/constraint-validation/constraint-validation.component';
+import { PlaygroundComponent } from './FormControl/playground/playground.component';
+import { Group1Component } from './FormGroup/group1/group1.component';
+import { Group2Component } from './FormGroup/group2/group2.component';
 
 const routes: Routes = [
   {
@@ -46,7 +49,20 @@ const routes: Routes = [
   {
     path: '7',
     component: Form7Component,
-  }
+  },
+  {
+    path: '8',
+    component: PlaygroundComponent,
+  },
+  {
+    path: '9',
+    component: Group1Component,
+  },
+  {
+    path: '10',
+    component: Group2Component,
+  },
+
 ];
 
 @NgModule({

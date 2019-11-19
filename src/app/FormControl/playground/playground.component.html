@@ -1,7 +1,7 @@
 <section class="section">
   <div class="container">
     <h1 class="title">Forms</h1>
-    <p class="subtitle">Escuchando cambios y cambiando validadores</p>
+    <p class="subtitle">Prueba cosas locas, completa la checklist y pregunta cualquier cosa que te sobrevuele la cabeza</p>
 
     <div class="columns is-vcentered">
       <div class="column">
@@ -9,22 +9,30 @@
         <div class="field">
           <label class="label">Text</label>
           <div class="control has-icons-left has-icons-right">
-            <input class="input" type="text" placeholder="Text input" [formControl]="textControl"
-                   [ngClass]="{'is-success': textControl.valid, 'is-danger': textControl.invalid}">
-            <span class="icon is-small is-right">
-              <i class="fa" [ngClass]="{'fa-check': textControl.valid, 'fa-exclamation-triangle': textControl.invalid}">
+
+            <!-- INPUT -->
+            <input class="input" type="text" placeholder="Text input"
+                   [ngClass]="{'is-success': huh?.valid, 'is-danger': huh?.invalid}">
+
+
+                   <span class="icon is-small is-right">
+              <i class="fa" [ngClass]="{'fa-check': huh?.valid, 'fa-exclamation-triangle': huh?.invalid}">
               </i>
             </span>
           </div>
-          <p class="help is-danger" *ngIf="textControl.invalid">Uh Oh!</p>
+
+          <!-- ERROR HELPER -->
+          <p class="help is-danger" *ngIf="huh?.invalid">Uh Oh!</p>
+
+
         </div>
 
       </div>
       <div class="column">
         Value
-        <pre>{{ textControl.value | json }}</pre>
+        <pre>{{ textControl?.value | json }}</pre>
         Errors
-        <pre>{{ textControl.errors | json }}</pre>
+        <pre>{{ textControl?.errors | json }}</pre>
       </div>
     </div>
 
@@ -35,7 +43,11 @@
           <label class="label">Checkbox</label>
           <div class="control">
             <label class="checkbox">
-              <input type="checkbox" [formControl]="checkboxControl">
+
+              <!-- CHECKBOX -->
+              <input type="checkbox">
+
+
               Check me!
             </label>
           </div>
@@ -44,9 +56,9 @@
       </div>
       <div class="column">
         Value
-        <pre>{{ checkboxControl.value | json }}</pre>
+        <pre>{{ huh?.value | json }}</pre>
         Errors
-        <pre>{{ checkboxControl.errors | json }}</pre>
+        <pre>{{ huh?.errors | json }}</pre>
       </div>
     </div>
   </div>
@@ -58,8 +70,8 @@
       class="pagination is-centered"
       role="navigation"
       aria-label="pagination">
-      <a class="pagination-previous" [routerLink]="['/6']">Anterior</a>
-      <a class="pagination-next" [routerLink]="['/8']">Siguiente</a>
+      <a class="pagination-previous" [routerLink]="['/7']">Anterior</a>
+      <a class="pagination-next" [routerLink]="['/9']">Siguiente</a>
     </nav>
   </div>
 </section>
