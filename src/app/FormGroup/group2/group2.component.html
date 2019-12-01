@@ -1,1 +1,108 @@
-<p>WIP</p>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Todo lo que FormControl y FormGroup comparten</p>
+
+    <form [formGroup]="myForm">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="tags has-addons">
+            <span class="tag">Status</span>
+            <span class="tag is-primary" *ngIf="myForm.valid">Valid</span>
+            <span class="tag is-danger" *ngIf="myForm.invalid">Invalid</span>
+          </div>
+        </div>
+        <div class="column">
+          <a class="button is-primary" (click)="setDefaultValue()">Batman rocks</a>
+        </div>
+      </div>
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="field">
+            <label class="label">Name</label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                class="input"
+                type="text"
+                placeholder="Text input"
+                formControlName="text"
+                [ngClass]="{
+                  'is-success': myForm.get('text').valid,
+                  'is-danger': myForm.get('text').invalid
+                }"
+              />
+              <span class="icon is-small is-right">
+                <i
+                  class="fa"
+                  [ngClass]="{
+                    'fa-check': myForm.get('text').valid,
+                    'fa-exclamation-triangle': myForm.get('text').invalid
+                  }"
+                >
+                </i>
+              </span>
+            </div>
+            <p class="help is-danger" *ngIf="myForm.get('text').invalid">
+              Uh Oh!
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          Value
+          <pre>{{ myForm.get("text").value | json }}</pre>
+        </div>
+        <div class="column">
+          Errors
+          <pre>{{ myForm.get("text").errors | json }}</pre>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="field">
+            <label class="label">Rocks</label>
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" formControlName="checkbox" />
+                Check me!
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          Value
+          <pre>{{ myForm.get("checkbox").value | json }}</pre>
+
+        </div>
+        <div class="column">
+          Errors
+          <pre>{{ myForm.get("checkbox").errors | json }}</pre>
+        </div>
+      </div>
+
+      <div class="columns is-vcentered">
+        <div class="column">
+          Value
+          <pre>{{ myForm.value | json }}</pre>
+        </div>
+        <div class="column">
+          Errors
+          <pre>{{ myForm.errors | json }}</pre>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <nav
+      class="pagination is-centered"
+      role="navigation"
+      aria-label="pagination"
+    >
+      <a class="pagination-previous" [routerLink]="['/9']">Anterior</a>
+      <a class="pagination-next" [routerLink]="['/11']">Siguiente</a>
+    </nav>
+  </div>
+</section>

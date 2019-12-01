@@ -50,6 +50,18 @@
           <pre>{{ myForm.get('checkbox').errors | json }}</pre>
         </div>
       </div>
+
+      <div class="columns is-vcentered">
+
+        <div class="column">
+          Value
+          <pre>{{ myForm.value | json }}</pre>
+        </div>
+        <div class="column">
+          Errors
+          <pre>{{ myForm.errors | json }}</pre>
+        </div>
+      </div>
     </form>
 
   </div>

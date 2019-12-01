@@ -10,7 +10,7 @@ export class Group1Component implements OnInit {
 
   myForm = new FormGroup({
     text: new FormControl('', []),
-    checkbox : new FormControl(false, []),
+    checkbox: new FormControl(false, []),
   });
 
   ngOnInit() {
