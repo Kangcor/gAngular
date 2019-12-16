@@ -12,6 +12,11 @@ import {ConstraintValidationComponent} from './basics/constraint-validation/cons
 import { PlaygroundComponent } from './FormControl/playground/playground.component';
 import { Group1Component } from './FormGroup/group1/group1.component';
 import { Group2Component } from './FormGroup/group2/group2.component';
+import { Array1Component } from './FormArray/array1/array1.component';
+import { Array2Component } from './FormArray/array2/array2.component';
+import { Array3Component } from './FormArray/array3/array3.component';
+import { Array4Component } from './FormArray/array4/array4.component';
+import { Array5Component } from './FormArray/array5/array5.component';
 
 const routes: Routes = [
   {
@@ -61,6 +66,26 @@ const routes: Routes = [
   {
     path: '10',
     component: Group2Component,
+  },
+  {
+    path: '11',
+    component: Array1Component,
+  },
+  {
+    path: '12',
+    component: Array2Component,
+  },
+  {
+    path: '13',
+    component: Array3Component,
+  },
+  {
+    path: '14',
+    component: Array4Component,
+  },
+  {
+    path: '15',
+    component: Array5Component,
   },
 
 ];

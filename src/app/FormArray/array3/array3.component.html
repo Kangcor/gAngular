@@ -1,0 +1,81 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Mi pizza favorita y validadores de Array</p>
+
+    <form [formGroup]="pizzaForm">
+      <div class="columns is-vcentered">
+        <div class="column">
+          <div class="tags has-addons">
+            <span class="tag">Status</span>
+            <span class="tag is-primary" *ngIf="pizzaForm.valid">Valid</span>
+            <span class="tag is-danger" *ngIf="pizzaForm.invalid">Invalid</span>
+          </div>
+        </div>
+        <div class="column">
+          <div class="buttons has-addons">
+            <a class="button is-primary" (click)="addIngredient()">Add ingredient</a>
+            <a class="button is-warning is-light" (click)="setFavoritePizza()">Favorite!</a>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-vcentered" formArrayName="ingredientsList"
+        *ngFor="let ingredient of ingredients.controls; let i = index">
+        <div class="column">
+          <div class="field">
+            <label class="label">
+              Ingredient #{{i}}
+              <a class="button is-danger is-small" (click)="removeIngredient(i)">Remove ingredient</a>
+            </label>
+            <div class="control has-icons-left has-icons-right">
+              <input
+                class="input"
+                type="text"
+                placeholder="What do you want in your pizza?"
+                [formControlName]="i"
+                [ngClass]="{
+                  'is-success': ingredient.valid,
+                  'is-danger': ingredient.invalid
+                }"
+              />
+              <span class="icon is-small is-right">
+                <i
+                  class="fa"
+                  [ngClass]="{
+                    'fa-check': ingredient.valid,
+                    'fa-exclamation-triangle': ingredient.invalid
+                  }"
+                >
+                </i>
+              </span>
+            </div>
+            <p class="help is-danger" *ngIf="ingredient.invalid">
+              An ingredient is required!
+            </p>
+          </div>
+        </div>
+        <div class="column">
+          Value
+          <pre>{{ ingredient.value | json }}</pre>
+        </div>
+        <div class="column">
+          Errors
+          <pre>{{ ingredient.errors | json }}</pre>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <nav
+      class="pagination is-centered"
+      role="navigation"
+      aria-label="pagination"
+    >
+      <a class="pagination-previous" [routerLink]="['/12']">Anterior</a>
+      <a class="pagination-next" [routerLink]="['/14']">Siguiente</a>
+    </nav>
+  </div>
+</section>

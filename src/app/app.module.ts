@@ -17,6 +17,11 @@ import { Form7Component } from './FormControl/form7/form7.component';
 import { PlaygroundComponent } from './FormControl/playground/playground.component';
 import { Group1Component } from './FormGroup/group1/group1.component';
 import { Group2Component } from './FormGroup/group2/group2.component';
+import { Array1Component } from './FormArray/array1/array1.component';
+import { Array2Component } from './FormArray/array2/array2.component';
+import { Array3Component } from './FormArray/array3/array3.component';
+import { Array4Component } from './FormArray/array4/array4.component';
+import { Array5Component } from './FormArray/array5/array5.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,11 @@ import { Group2Component } from './FormGroup/group2/group2.component';
     PlaygroundComponent,
     Group1Component,
     Group2Component,
+    Array1Component,
+    Array2Component,
+    Array3Component,
+    Array4Component,
+    Array5Component,
   ],
   imports: [
     BrowserModule,
