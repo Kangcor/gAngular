@@ -1,1 +1,31 @@
-<p>array4 works!</p>
+<section class="section">
+  <div class="container">
+    <h1 class="title">Forms</h1>
+    <p class="subtitle">Welcome to the next level</p>
+
+    <div class="columns">
+      <div class="column">
+        Your Form
+        <pre>{{myForm.value | json}}</pre>
+      </div>
+      <div class="column">
+        Objective
+        <pre>{{objectiveForm | json}}</pre>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <nav
+      class="pagination is-centered"
+      role="navigation"
+      aria-label="pagination"
+    >
+      <a class="pagination-previous" [routerLink]="['/13']">Anterior</a>
+      <a class="pagination-next">Siguiente</a>
+    </nav>
+  </div>
+</section>
